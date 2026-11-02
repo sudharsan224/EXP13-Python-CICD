@@ -52,14 +52,13 @@ pipeline {
         }
 
         stage('Verify Deployment') {
-            steps {
-                sh '''
-                    sleep 3
-                    curl --fail http://localhost:5000/health
-                '''
-            }
-        }
+    steps {
+        sh '''
+            sleep 5
+            curl --fail http://host.docker.internal:5000/health
+        '''
     }
+}
 
     post {
         success {
