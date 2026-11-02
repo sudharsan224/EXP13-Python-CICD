@@ -1,9 +1,8 @@
 pipeline {
-
 agent any
 
+```
 stages {
-
     stage('Checkout') {
         steps {
             echo 'Checking Source Code'
@@ -61,11 +60,10 @@ post {
     success {
         echo 'CI/CD Pipeline Completed Successfully!'
     }
-
     failure {
         echo 'CI/CD Pipeline Failed!'
     }
 }
+```
 
-
-
+}
